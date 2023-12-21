@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
-    <!-- Шапка -->
+    <!-- Шапка (menu)-->
     <header>
       <section class="navbar">
         <div class="container container_navbar">
           <div class="logo">
             <img src="img/logo.png" alt="logo" />
           </div>
-          <div class="nav_menu">
+          <nav class="nav_menu">
+            <!-- <input type="checkbox" name="menu" id="btn-menu" />
+            <label for="btn-menu">btn menu</label>  -->
             <ul class="nav_menu_items">
               <li class="nav_menu_item"><a href="">Home</a></li>
               <li class="nav_menu_item"><a href="">Skills</a></li>
@@ -22,10 +24,99 @@
               <li class="nav_menu_item"><a href="">Pricing</a></li>
               <li class="nav_menu_item"><a href="">Contacts</a></li>
             </ul>
-          </div>
+            <!-- делаем меню скрытым на маленьких экранах -->
+          </nav>
           <button class="nav_button">Let’s Talk</button>
         </div>
       </section>
+      <section class="header">
+        <div class="container container_header">
+          <div class="header_text">
+            <div class="text_light">
+              <h2 class="header_h2">Learn<br />Any Foreign Language</h2>
+              <img class="header_light" src="img/light-bulb.svg" alt="light" />
+            </div>
+
+            <p class="header_p">
+              With our teachers who write a program for each student, you will
+              be able to make your first sketch after the first lesson.
+            </p>
+            <button class="header_button">Get started</button>
+          </div>
+          <div class="header_image">
+            <img src="img/Header_img.png" alt="img" />
+          </div>
+        </div>
+      </section>
     </header>
+    <!-- Секция Skills -->
+    <section class="skills">
+      <div class="container">
+        <h2 class="skills_h2">Skills</h2>
+        <div class="skills_grid">
+          <!-- элемент 1 -->
+          <div class="skills__grid-item speaking">
+            <div class="skills__grid-image">
+              <img src="img/skills_speaking.png" alt="img" />
+            </div>
+            <div class="skills__grid-content">
+              <h3 class="skills_h3">Speaking</h3>
+              <p class="skills_p">
+                Improve your English skills and confidence. Live classes and
+                interactive lessons online. 20% extra free for a limited time
+                only.<br /><br />
+                Learn English online and improve your skills through our
+                high-quality courses and resources – all designed for adult
+                language learners.
+              </p>
+              <button class="skills_button">Learn more</button>
+            </div>
+          </div>
+          <!-- элемент 2 -->
+          <div class="skills__grid-item writing">
+            <div class="skills__grid-image">
+              <img src="img/skills_writing.png" alt="img" />
+            </div>
+            <div class="skills__grid-content">
+              <h3 class="skills_h3">Writing</h3>
+              <p class="skills_p">
+                One of the most important and extensive areas of natural
+                science, the science that studies substances, also their
+                composition
+              </p>
+              <button class="skills_button">Learn more</button>
+            </div>
+          </div>
+          <!-- элемент 3 -->
+          <div class="skills__grid-item reading">
+            <div class="skills__grid-image">
+              <img src="img/skills_reading.png" alt="img" />
+            </div>
+            <div class="skills__grid-content">
+              <h3 class="skills_h3">Reading</h3>
+              <p class="skills_p">
+                perception and response actions of the user resulting from the
+                use and/or upcoming use of the product, system or service
+              </p>
+              <button class="skills_button">Learn more</button>
+            </div>
+          </div>
+          <!-- элемент 4 -->
+          <div class="skills__grid-item listening">
+            <div class="skills__grid-image">
+              <img src="img/skills_listening.png" alt="img" />
+            </div>
+            <div class="skills__grid-content">
+              <h3 class="skills_h3">Listening</h3>
+              <p class="skills_p">
+                Here you can find activities to practise your listening skills.
+                Listening will help you to improve your understanding
+              </p>
+              <button class="skills_button">Learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
