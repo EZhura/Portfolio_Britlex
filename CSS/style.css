@@ -30,6 +30,7 @@ p {
 body {
   font-family: "Poppins", sans-serif;
   max-width: 1600px;
+  width: 100%;
 }
 .container {
   max-width: 1600px;
@@ -134,7 +135,7 @@ nav label:hover {
 }
 
 .header {
-  margin-bottom: 103px;
+  margin-bottom: 54px;
 }
 
 .container_header {
@@ -184,15 +185,60 @@ nav label:hover {
   background: #263238;
 }
 .header_image {
-  width: 661px;
+  min-width: 500px;
   height: auto;
 }
 
+@media only screen and (max-width: 992px) {
+  .header_image {
+    min-width: 460px;
+    height: auto;
+  }
+  .header_text {
+    max-height: 460px;
+  }
+  .header_h2 {
+    max-height: 190px;
+  }
+  /* .header_button {
+    width: 80%;
+  } */
+}
+@media only screen and (max-width: 767px) {
+  .header_image {
+    min-width: 352px;
+    height: auto;
+  }
+  .header_text {
+    max-width: 352px;
+    max-height: auto;
+  }
+  .header_p {
+    max-width: 352px;
+  }
+  .header_button {
+    max-width: 352px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .container_header {
+    flex-wrap: wrap;
+  }
+  .header {
+    margin-bottom: 661px;
+  }
+  .header_image {
+    order: 1;
+  }
+}
 /* Секция Skills */
 
 .skills {
   padding: 0 130px 0;
   margin-bottom: 282px;
+}
+.container_skills {
+  max-width: 1338px;
 }
 .skills_h2 {
   color: #000;
@@ -210,7 +256,8 @@ nav label:hover {
     "one two three"
     "one four four";
   /* описываем по рядам заполнение контентом */
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-content: center;
   align-items: stretch;
   max-height: 894px;
   max-width: 1340px;
@@ -242,6 +289,8 @@ nav label:hover {
 .skills__grid-item.listening {
   flex-direction: row-reverse;
   justify-content: flex-end;
+  /* меняем местами картинки, либо можно присвоить первую позицию нужной картинке
+  order: 1; */
   justify-content: space-between;
 }
 .skills__grid-item.speaking {
@@ -282,4 +331,371 @@ nav label:hover {
 }
 .skills_button:hover {
   opacity: 0.8;
+}
+
+@media only screen and (max-width: 767px) {
+  .skills_grid {
+    width: 100%;
+  }
+  .container_skills {
+    max-width: 696px;
+    width: 100%;
+    margin-left: 100px;
+  }
+  h2 {
+    margin-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .skills {
+    margin-bottom: 383px;
+  }
+  .skills_grid {
+    grid-template-areas:
+      "one two "
+      "one two "
+      "three four"
+      "three four";
+    margin-left: 48px;
+  }
+  .skills_h2 {
+    margin-bottom: 300px;
+    margin-left: 100px;
+  }
+  .skills__grid-item.listening {
+    flex-wrap: wrap;
+    /* либо display: block, возвращаем блочную форму, контент будет друг под другом  */
+  }
+}
+@media only screen and (max-width: 320px) {
+  .skills_grid {
+    grid-template-areas:
+      "one"
+      "two "
+      "three"
+      "four";
+  }
+  .skills {
+    margin-left: 150px;
+  }
+}
+/* Секция About Us */
+
+.about {
+  margin-bottom: 160px;
+}
+.container_flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+.about_content {
+}
+.about_h1 {
+  color: #000;
+  min-width: 220px;
+  font-family: "Poppins";
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 80px; /* 166.667% */
+  margin-left: 150px;
+}
+.about_p {
+  color: #8f95a5;
+  font-family: "Poppins";
+  width: 635px;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 66px;
+}
+.about_numbers_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: start;
+  text-align: center;
+}
+.grid_inner {
+  color: #2a3246;
+  max-height: 80px;
+  font-family: "Poppins";
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 80px; /* 166.667% */
+}
+.grid_inner p {
+  color: #8f95a5;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 400;
+}
+.about_img {
+  min-width: 283px;
+}
+@media only screen and (max-width: 575px) {
+  .container_flex {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .about_h1 {
+    order: 1;
+    margin-left: 176px;
+  }
+  body {
+    margin-left: 100px;
+  }
+}
+
+/* Секция Pricing */
+
+.pricing {
+  margin-bottom: 290px;
+  min-width: 635px;
+}
+.pricing_h2 {
+  text-align: center;
+  color: #000;
+  font-family: "Poppins";
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 80px; /* 166.667% */
+  margin-bottom: 83px;
+  margin-left: 105px;
+}
+.pricing_container_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  margin-left: 150px;
+  align-items: end;
+}
+
+.pricing_inner h5 {
+  color: #263238;
+  font-family: "Poppins";
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 48px; /* 160% */
+}
+.pricing_inner p {
+  min-height: 90px;
+}
+.pricing_inner img {
+  margin-bottom: 30px;
+}
+
+/* .pricing_button {
+  width: 240px;
+  height: 45px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #eee;
+  color: #263238;
+  font-family: "Poppins";
+  font-size: 30px;
+  font-weight: 400;
+} */
+.pricing__grid-item-flex-1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px;
+  background: #eee;
+  max-width: 220px;
+  justify-content: center;
+  cursor: pointer;
+}
+.pricing__grid-item-flex-2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px;
+  background: #eee;
+  max-width: 220px;
+  justify-content: center;
+  cursor: pointer;
+}
+.pricing__grid-item-flex-2 .pricing__grid-item-flex-numb {
+  margin-right: 10px;
+}
+.pricing__grid-item-flex-3 .pricing__grid-item-flex-numb {
+  margin-right: 15px;
+}
+.pricing__grid-item-flex-3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px;
+  background: #eee;
+  max-width: 220px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.pricing__grid-item-flex-3:hover {
+  opacity: 0.8;
+}
+.pricing__grid-item-flex-2:hover {
+  opacity: 0.8;
+}
+.pricing__grid-item-flex-1:hover {
+  opacity: 0.8;
+}
+.pricing__grid-item-flex-numb {
+  color: #263238;
+  font-family: "Poppins";
+  font-size: 30px;
+  width: 90px;
+  font-weight: 400;
+}
+.pricing__grid-item-flex-text {
+  color: #546269;
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 400;
+}
+@media only screen and (max-width: 575px) {
+  .pricing_container_grid {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    margin-right: 25px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .pricing_container_grid {
+    width: 100%;
+    margin-left: 25px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .pricing_container_grid {
+    width: 100%;
+    margin-left: 25px;
+  }
+}
+/* Секция Contacts */
+
+.contacts {
+  margin-bottom: 133px;
+}
+.container_contacts {
+  width: 100%;
+}
+.container_flex {
+}
+.contacts_img {
+  width: 477px;
+  height: 429px;
+  flex-shrink: 0;
+}
+.content {
+}
+.contacts_h2 {
+  color: #000;
+  font-family: "Poppins";
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 80px; /* 166.667% */
+  padding-bottom: 37px;
+  text-align: center;
+  margin-left: 92px;
+}
+.contacts_p {
+  color: #8f95a5;
+  font-family: "Poppins";
+  font-size: 20px;
+  width: 770px;
+  font-weight: 400;
+  margin-bottom: 52px;
+}
+.Newsletter_input_flex {
+  display: flex;
+}
+.mail_form {
+  width: 450px;
+  height: 80px;
+  border-radius: 10px;
+  border: 1px solid #8f95a5;
+  padding-left: 29px;
+}
+.contacts_button {
+  width: 264px;
+  height: 80px;
+  border-radius: 10px;
+  background: #263238;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+}
+.contacts_button:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 575px) {
+  .contacts {
+    width: 100%;
+  }
+  .contacts_img {
+    order: 1;
+    margin-bottom: 35px;
+  }
+  .contacts_h2 {
+    text-align: center;
+    margin-bottom: 83px;
+  }
+  .content {
+    padding: 25px;
+  }
+  .container_contacts {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .Newsletter_input_flex {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+/* Секция Footer */
+.footer {
+}
+.footer_menu_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  min-width: 106px;
+  height: 54px;
+}
+.footer_menu_inner li {
+  display: inline;
+}
+.menu_inner {
+  width: 776px;
+  color: #8f95a5;
+  font-family: "Poppins";
+  font-size: 24px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.menu_inner:hover {
+  opacity: 0.8;
+}
+hr {
+  margin-bottom: 31px;
+  min-width: 510px;
+}
+@media only screen and (max-width: 320px) {
+  .footer_menu_flex {
+    flex-wrap: wrap;
+  }
+  .logo {
+    margin-left: 291px;
+  }
 }
