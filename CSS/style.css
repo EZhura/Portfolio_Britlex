@@ -121,7 +121,12 @@ nav label:hover {
   font-family: "Poppins";
   font-size: 24px;
   font-weight: 400;
+  cursor: pointer;
 }
+.nav_button:hover {
+  background: #263238;
+color: #fff;}
+
 .nav_menu button {
   display: none;
 }
@@ -183,7 +188,11 @@ nav label:hover {
   font-weight: 400;
   border-radius: 15px;
   background: #263238;
+  cursor: pointer;
 }
+.header_button:hover {
+  opacity: 0.8;}
+
 .header_image {
   min-width: 500px;
   height: auto;
